@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int fibonacci(int k) {
+    if (k < 2) return 1;
+    return fibonacci(k-1)+fibonacci(k-2);    
+}
+
 int main() {
 
     typedef struct {
@@ -16,5 +21,12 @@ int main() {
 
     printf("Coordinates: (%d,%d)\n",p->x,p->y);
 
+    for (int i = 0; i  < 10; i++)
+    {
+        printf("Fibo(%d) = %d\n", i, fibonacci(i));
+    
+    }
+    
+    
     free(p);
 }
