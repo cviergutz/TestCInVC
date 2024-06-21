@@ -24,11 +24,9 @@ int main() {
 
     printf("Coordinates: (%d,%d)\n",p->x,p->y);
 
-    for (int i = 0; i  < 20; i++)
-    {
+    for (int i = 0; i  < 20; i++) {
         printf("Fibo(%d) = %d\n", i, fibonacci(i));
     }
-    
-    
+
     free(p);
 }
