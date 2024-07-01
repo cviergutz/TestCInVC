@@ -131,6 +131,38 @@ void up(int top, int front, enum hand h)
         break;
 
     case LEFT:
+        for (int i = 0; i < TILES_PER_SIDE; i++) {
+            sideTiles[i] = cube[left][i];
+        }
+
+        buffer[0] = cube[front][0];
+        buffer[1] = cube[front][3];
+        buffer[2] = cube[front][6];
+
+        cube[front][0] = cube[bottom][0];
+        cube[front][3] = cube[bottom][3];
+        cube[front][6] = cube[bottom][6];
+
+        cube[bottom][0] = cube[back][2];
+        cube[bottom][3] = cube[back][5];
+        cube[bottom][6] = cube[back][8];
+
+        cube[back][2] = cube[top][6];
+        cube[back][5] = cube[top][3];
+        cube[back][8] = cube[top][0];
+
+        cube[top][0] = buffer[0];
+        cube[top][3] = buffer[1];
+        cube[top][6] = buffer[2];
+
+        cube[left][0] = sideTiles[2];
+        cube[left][1] = sideTiles[5];
+        cube[left][2] = sideTiles[8];
+        cube[left][3] = sideTiles[1];
+        cube[left][5] = sideTiles[7];
+        cube[left][6] = sideTiles[0];
+        cube[left][7] = sideTiles[3];
+        cube[left][8] = sideTiles[6];
         break;
     }
 }
@@ -155,6 +187,22 @@ int main()
 
     printf("\nTurning right up (4):\n");
     up(0, 2, RIGHT);
+    drawCube();
+
+    printf("\nTurning left up (1):\n");
+    up(0, 2, LEFT);
+    drawCube();
+
+    printf("\nTurning left up (2):\n");
+    up(0, 2, LEFT);
+    drawCube();
+
+    printf("\nTurning left up (3):\n");
+    up(0, 2, LEFT);
+    drawCube();
+
+    printf("\nTurning left up (4):\n");
+    up(0, 2, LEFT);
     drawCube();
 
     return EXIT_SUCCESS;
