@@ -5,7 +5,8 @@ class Point {
         x=a; y=b;
     }
 
-    public String getString() {
+    @Override
+    public String toString() {
         return "("+String.valueOf(x)+","+String.valueOf(y)+")";
     }
 }
@@ -15,6 +16,6 @@ class Main {
         System.out.println("Hello World!");
 
         Point p = new Point(3, 4);
-        System.out.println(p.getString());
+        System.out.println(p);
     }
 }

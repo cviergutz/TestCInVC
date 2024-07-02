@@ -17,12 +17,13 @@ int leftOf[6][6] = {
     {1, 5, 9, 0, 9, 3}, // Top green
     {9, 2, 3, 4, 1, 9}  // Top yellow
 };
+
+// Refence to the respective opposite side of the cube
 int opposite[6] = {5, 3, 4, 1, 2, 0};
 
 enum hand
 {
-    LEFT,
-    RIGHT
+    LEFT, RIGHT
 };
 
 char cube[SIDES][TILES_PER_SIDE];
