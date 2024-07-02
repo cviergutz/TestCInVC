@@ -1,13 +1,14 @@
 class Point {
-    private int x,y;
+    private int x, y;
 
     Point(int a, int b) {
-        x=a; y=b;
+        x = a;
+        y = b;
     }
 
     @Override
     public String toString() {
-        return "("+String.valueOf(x)+","+String.valueOf(y)+")";
+        return "(" + String.valueOf(x) + "," + String.valueOf(y) + ")";
     }
 }
 
