@@ -4,6 +4,9 @@
 #define SIDES 6
 #define TILES_PER_SIDE 9
 
+// Define Cube as 2-dim array of sides and tiles per side
+char cube[SIDES][TILES_PER_SIDE];
+
 // Colors/Sides   0    1    2    3    4    5
 char color[6] = {'W', 'R', 'B', 'O', 'G', 'Y'};
 
@@ -25,8 +28,6 @@ enum hand
 {
     LEFT, RIGHT
 };
-
-char cube[SIDES][TILES_PER_SIDE];
 
 void initCube()
 {
