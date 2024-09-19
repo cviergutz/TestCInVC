@@ -10,6 +10,10 @@ class Point {
     public String toString() {
         return "(" + String.valueOf(x) + "," + String.valueOf(y) + ")";
     }
+
+    public double distance(Point other) {
+        return Math.sqrt(Math.sqr(other.x-x)+Math.sqr(other.y-y));
+    }
 }
 
 class Main {
