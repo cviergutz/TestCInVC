@@ -12,7 +12,7 @@ class Point {
     }
 
     public double distance(Point other) {
-        return Math.sqrt(Math.sqr(other.x-x)+Math.sqr(other.y-y));
+        return Math.sqrt((other.x-x)*(other.x-x)+(other.y-y)*(other.y-y));
     }
 }
 
@@ -22,5 +22,8 @@ class Main {
 
         Point p = new Point(3, 4);
         System.out.println(p);
+
+        Point q = new Point(6,8);
+        System.out.println("The distance between "+p+" and "+q+" is:"+p.distance(q));
     }
 }
